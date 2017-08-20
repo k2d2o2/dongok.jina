@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+body {
+  color: #666;
+  font-family: "Times New Roman", "Nanum Myeongjo", serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #fffff3;
+}
+
+#menu {
+  position: fixed;
+  width: 100%;
+}
+
+#cover-image {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  background-image: url('cover.jpg');
+  filter: none;
+}
+
+#message {
+
+}
