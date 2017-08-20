@@ -10,6 +10,7 @@ body {
 }
 
 #menu {
+  font-family: Zapfino;
   position: fixed;
   width: 100%;
 }
@@ -26,4 +27,11 @@ body {
 
 #message {
 
+}
+
+#maps img {
+  display: block;
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
 }
