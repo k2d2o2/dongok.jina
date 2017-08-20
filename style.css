@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #fffff3;
+  background-color: #fffff8;
 }
 
 #menu {
@@ -26,12 +26,31 @@ body {
 }
 
 #message {
+  padding: 50px 0 50px 0;
+}
 
+#gallery {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+#gallery img {
+  cursor: pointer;
+}
+
+#gallery::-webkit-scrollbar {
+  display: none;
+}
+
+em {
+  font-family: Zapfino;
+  font-weight: bold;
+  font-style: normal;
 }
 
 #maps img {
-  display: block;
+  display: inline-block;
   margin: auto;
-  width: 90%;
-  max-width: 800px;
+  width: 45%;
+  max-width: 300px;
 }
