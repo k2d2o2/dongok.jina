@@ -22,23 +22,16 @@ a  { color: #666; text-decoration: none; }
 hr { width: 150px; border-top: 1px solid #ccc; border-bottom: 0; margin: 50px auto 20px auto; }
 
 #cover-image {
-  display: block;
-  margin: auto;
-  width: 100%;
+  background-image: url('images/cover.jpg');
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   max-width: 800px;
-}
-
-@media screen and (max-width: 800px) {
-  #cover-image {
-    min-width: 1.31vw;
-  }
-}
-
-#gallery {
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  white-space: nowrap;
-  line-height: normal;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
 #gallery img {
@@ -65,19 +58,30 @@ hr { width: 150px; border-top: 1px solid #ccc; border-bottom: 0; margin: 50px au
   border-radius: 11px;
 }
 
-#footer {
-  color: #999;
-  font-size: 8pt;
-  margin: 10px 0 20px 0;
-}
 </style>
 </head>
 <body>
 <!-- 메인사진 -->
-<div id="cover">
-  <img id="cover-image" src="images/cover.jpg">
+<div id="cover" style="position: relative; width: 100%; background-image: url('images/cover-blurred.jpg'); background-position: center; background-size: 100% auto; z-index: -2;">
+  <!--
+  <div id="cover-title-bottom" style="position: absolute; width: 100%; height: 50vh;">
+    <div style="padding: 10px 0 10px 0; background: rgba(0, 0, 0, 0.5); color: white; font-size: 24pt; margin: 0 auto;">
+      전나영 ♡ 김종욱
+    </div>
+  </div>
+  -->
+  <div id="cover-image"></div>
+  <!--
+  <div id="cover-title-bottom" style="position: absolute; transform: translateY(-50vh); width: 100%; height: 50vh; display: table;">
+    <div style="display: table-cell; vertical-align: bottom;">
+      <p style="padding: 10px 0 10px 0; background: rgba(0, 0, 0, 0.5); color: white; font-size: 24pt; margin: 0 auto;">
+        결혼식에 초대합니다!
+      </p>
+    </div>
+  </div>
+  -->
 </div>
-<hr>
+
 <!-- 초대장 -->
 <div id="message">
   <h3>INVITATION</h3>
@@ -108,7 +112,7 @@ hr { width: 150px; border-top: 1px solid #ccc; border-bottom: 0; margin: 50px au
 <hr>
 <!-- 갤러리 -->
 <h3>GALLERY</h3>
-<div id="gallery">
+<div id="gallery" style="overflow-x: scroll; -webkit-overflow-scrolling: touch; white-space: nowrap; line-height: normal;">
   <a href="photos/0014.jpg" data-fancybox="gallery"><img src="thumbs/0014.jpg" height="100px"></a>
   <a href="photos/0017.jpg" data-fancybox="gallery"><img src="thumbs/0017.jpg" height="100px"></a>
   <a href="photos/0020.jpg" data-fancybox="gallery"><img src="thumbs/0020.jpg" height="100px"></a>
@@ -167,7 +171,7 @@ hr { width: 150px; border-top: 1px solid #ccc; border-bottom: 0; margin: 50px au
 </p>
 <hr>
 <div id="footer">
-  Sincerely, Na Young &amp; Jong Wook
+  <img src="images/nayoung.jongwook.svg" style="width:300px;opacity:0.72;">
 </div>
 
 <script type="text/javascript" src="jquery-3.2.1.min.js"></script>

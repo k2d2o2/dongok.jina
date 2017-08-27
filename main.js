@@ -4,4 +4,7 @@
       arrows: false
     });
   });
+  var adjust = function() { $("#cover-image").css("height", $(window).height() + "px"); };
+  $(window).on('resize', adjust);
+  adjust();
 }(document);
