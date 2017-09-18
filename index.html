@@ -58,6 +58,10 @@ hr { width: 150px; border-top: 1px solid #ccc; border-bottom: 0; margin: 50px au
   border-radius: 11px;
 }
 
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
 </style>
 </head>
 <body>
@@ -71,15 +75,13 @@ hr { width: 150px; border-top: 1px solid #ccc; border-bottom: 0; margin: 50px au
   </div>
   -->
   <div id="cover-image"></div>
-  <!--
   <div id="cover-title-bottom" style="position: absolute; transform: translateY(-50vh); width: 100%; height: 50vh; display: table;">
     <div style="display: table-cell; vertical-align: bottom;">
-      <p style="padding: 10px 0 10px 0; background: rgba(0, 0, 0, 0.5); color: white; font-size: 24pt; margin: 0 auto;">
-        결혼식에 초대합니다!
+      <p style="animation: blinker 1s ease-in-out infinite; padding: 10px 0 10px 0; /* background: rgba(0, 0, 0, 0.5); */ color: white; font-size: 12pt; margin: 0 auto;">
+        ▼
       </p>
     </div>
   </div>
-  -->
 </div>
 
 <!-- 초대장 -->
